@@ -1,0 +1,208 @@
+rest api representational state transfer// Application programming interface //Java™ Persistence API (JPA)
+
+Rest API : A REST API (also known as RESTful API) is an application programming interface (API or web API) that 
+conforms to the constraints of REST architectural style and allows for interaction with RESTful web services.
+
+
+Spring Boot provides a good platform for Java developers to develop a stand-alone and production-grade 
+spring application. 
+we can get started with minimum configurations without the need for an entire Spring configuration setup.
+
+JPA stands for Java Persistence API (Application Programming Interface).It is a Java specification that gives some 
+functionality and standard to ORM tools.It is used to examine, control, and persist data between Java objects and 
+relational databases.
+
+An object-relational mapper (ORM) is a code library that automates the transfer of data stored in relational database 
+tables into objects that are more commonly used in application code.Object-Relational Mapping (ORM) is a 
+technique that lets you query and manipulate data from a database using an object-oriented paradigm. 
+
+Advantages
+    Easy to understand and develop spring applications
+    Increases productivity
+    Reduces the development time
+
+Why Spring Boot?
+    It provides a flexible way to configure Java Beans, XML configurations, and Database Transactions.
+    It provides a powerful batch processing and manages REST endpoints.
+    In Spring Boot, everything is auto configured; no manual configurations are needed.
+    It offers annotation-based spring application
+    Eases dependency management
+    It includes Embedded Servlet Container
+
+Why Springboot over Spring?
+spring boot framework provides some starter templates which makes managing dependancy easy
+spring boot framework avoids writing of complex xml configuration file
+spring boot framework has ready made servlet container(testing becomes easy)
+
+@SpringBootApplication annotation is used to mark a configuration class that declares one or more 
+@Bean methods and also triggers auto-configuration and component scanning.
+@ComponentScan scans for Spring components while @EnableAutoConfiguration is used for auto-configuring beans present 
+in the classpath in Spring Boot applications.
+
+@ComponentScan: It is used when we want to scan a package for beans. It is used with the annotation @Configuration. 
+We can also specify the base packages to scan for Spring Components.
+
+@Entity annotation defines that a class can be mapped to a table
+
+@JsonIgnoreProperties :- JPA Annotation, @JsonIgnoreProperties is used at class level to mark a property or list of 
+properties to be ignored.
+
+cascade : When we perform some action on the target entity, the same action will be applied to the associated entity.
+jpa cascade types : 
+    All : CascadeType.ALL propagates all operations — including Hibernate-specific ones — from a parent to a child entity.
+    PERSIST : Cascade Type PERSIST propagates the persist operation from a parent to a child entity. 
+    Merge : CascadeType.MERGE propagates the merge operation from a parent to a child entity.
+    Remove : CascadeType.REMOVE propagates the remove operation from parent to child entity. Similar to JPA's 
+CascadeType.REMOVE, we have CascadeType.DELETE, which is specific to Hibernate. 
+    REFRESH : When we use this operation with Cascade Type REFRESH, the child entity also gets reloaded from the 
+database whenever the parent entity is refreshed.
+    DETACH : When we use CascadeType.DETACH, the child entity will also get removed from the persistent context.
+
+@Mapped by : the value of mappedBy is the name of the association-mapping attribute on the owning side.
+This means that although you link 2 tables together, only 1 of those tables has a foreign key constraint to the 
+other one. MappedBy allows you to still link from the table not containing the constraint to the other table. 
+
+@Repository: It is a class-level annotation. The repository is a DAOs (Data Access Object) that access the database 
+directly. The repository does all the operations related to the database.
+storage, retrieval, update, delete and search operation
+
+@service :- The service contains an interface or an abstract class that defines the functionality provided by the service.
+
+@Autowired: Spring provides annotation-based auto-wiring by providing @Autowired annotation. 
+It is used to autowire spring bean on setter methods, instance variable, and constructor. 
+When we use @Autowired annotation, the spring container auto-wires the bean by matching data-type.
+
+@Controller: The @Controller is a class-level annotation. It is a specialization of @Component. 
+It marks a class as a web request handler. It is often used to serve web pages. By default, 
+it returns a string that indicates which route to redirect. 
+It is mostly used with @RequestMapping annotation.
+
+@RestController: It can be considered as a combination of @Controller and @ResponseBody annotations. The 
+@RestController annotation is itself annotated with the @ResponseBody annotation. It eliminates the need for 
+annotating each method with @ResponseBody.
+
+@cross-origin :- Cross-Origin Resource Sharing (CORS) is a security concept that allows restricting the resources 
+implemented in web browsers
+
+@GetMapping: It maps the HTTP GET requests on the specific handler method. It is used to create a web service endpoint that 
+fetches It is used instead of using: @RequestMapping(method = RequestMethod.GET)
+
+@PostMapping: It maps the HTTP POST requests on the specific handler method. It is used to create a web service 
+endpoint that creates It is used instead of using: @RequestMapping(method = RequestMethod.POST)
+
+@RequestHeader: It is used to get the details about the HTTP request headers. We use this annotation as a method 
+parameter. The optional elements of the annotation are name, required, value, defaultValue. For each detail in the 
+header, we should specify separate annotations.
+
+@RequestBody: It is used to bind HTTP request with an object in a method parameter. Internally it uses HTTP 
+MessageConverters to convert the body of the request. When we annotate a method parameter with @RequestBody, 
+the Spring framework binds the incoming HTTP request body to that parameter.
+
+@ResponseBody: It binds the method return value to the response body. It tells the Spring Boot Framework to 
+serialize a return an object into JSON and XML format.
+
+@PathVariable: It is used to extract the values from the URI. It is most suitable for the RESTful web service, 
+where the URL contains a path variable. We can define multiple @PathVariable in a method.
+
+@RequestParam: It is used to extract the query parameters form the URL. It is also known as a query parameter. 
+It is most suitable for web applications. It can specify default values if the query parameter is not present in 
+the URL.
+
+	</dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+
+
+
+
+
+React JS
+React : React is a free and open-source front-end JavaScript library for building user interfaces based on UI 
+components.
+React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It's 'V' in MVC. 
+ReactJS is an open-source, component-based front end library responsible only for the view layer of the application.
+Advantages: 
+	single page app
+	vertual dom
+	react native
+	react dev tools
+
+components : class and function component,Higher-Order Components,Dumb Components, Smart Components, Presentational Components
+ Container components
+
+Class Components: The class components are a little more complex than the functional components. The functional 
+components are not aware of the other components in your program whereas the class components can work with each other. 
+We can pass data from one class component to other class components. 
+(extends from react comp class, stateful,componentdidmount, render method,)
+
+Functional Components: Functional components are simply javascript functions. We can create a functional component 
+in React by writing a javascript function. These functions may or may not receive data as parameters
+(stateless, can accept data(props), no render method, hooks are used)
+
+A virtual DOM is a lightweight JavaScript representation of the Document Object Model (DOM) used in declarative web 
+frameworks such as React, Vue. js, and Elm.
+it is a programming concept where an ideal, or “virtual”, representation of a UI is kept in 
+memory and synced with the “real” DOM by a library such as ReactDOM. This process is called reconciliation.
+Whenever the component's state or properties change, React updates the tree representing the virtual DOM in React.
+
+JSX javascript extension - html and javascript together
+
+A Promise object is simply a wrapper around a value that may or may not be known when the object is instantiated 
+and provides a method for handling the value after it is known (also known as resolved ) or is unavailable for a 
+failure reason (we'll refer to this as rejected ).
+Promises are used to handle asynchronous operations in JavaScript
+Why We Use Promise in react?
+It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This 
+lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, 
+the asynchronous method returns a promise to supply the value at some point in the future.
+
+e.preventDefault() :- The preventDefault() method cancels the event if it is cancelable, meaning that the default 
+action that belongs to the event will not occur.
+
+'Content-Type':'application/json' :- Indicates that the request body format is JSON.
+
+session storage vs local storage :- the difference is that while data in localStorage doesn't expire, data in 
+sessionStorage is cleared when the page session ends.
+
+React hooks are a type of function that allows the users to hook into react state and life-cycle features from 
+function components. React provides built-in hooks like useState, useEffect, useReducer, useRef, use Callback, 
+useContext, useMemo and we can also create your own custom hooks.
+
+Advantages:
+can write concise and clearer code.
+Hooks are simpler to work with and test. Code would appear cleaner and easier to read.
+A related logic could be tightly coupled inside a custom hook. 
+It simplifies how to make code more composable and reusable. 
+Hooks would work more efficiently with the future React optimizations.
+Components folding may be implemented in the future. It suggests that for code elimination at compile-time, hooks 
+are simple to reuse the stateful logic.
