@@ -1,0 +1,14 @@
+touch .gitignore
+git config --global user.name Harshal
+git config --global user.email harshaljawale58@gmail.com
+git init
+git add *
+git commit -m "Initial commit"
+git status  # Just to see
+ssh-keygen -t ed25519 -C "harshaljawale58@gmail.com"
+cat  < PATH TO id_rsa.pub >
+			ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF7Y95FNyW9obAKIeT1y3chZIFD7fkP2ZS3CoTF3jlz4
+			harshaljawale58@gmail.com # Add this key to your Github account 
+git remote add origin <ssh url.git>  # SSH( not HTTP SELECTED )
+	git remote add origin git@github.com:harshal-58/ConnectingToDoctor.git 
+git push origin master
