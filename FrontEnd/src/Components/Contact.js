@@ -11,12 +11,12 @@ const Contact = () => {
                 <ul style={{color : "blue"}}>
                     <li>
                         <h4>
-                        connectingtodoctor@gmail.com                     
+                        connecttoyourdoctor@gmail.com                     
                         </h4>
                     </li>
                     <li>
                         <h4>
-                        atishbutkar.project@gmail.com 
+                        narwade.niraj.44@gmail.com 
                         </h4>
                     </li>
                 </ul>

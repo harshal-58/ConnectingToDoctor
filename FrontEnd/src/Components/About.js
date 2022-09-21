@@ -16,7 +16,7 @@ const About = () => {
                         <li>Akash Jaiswal</li>
                         <li>Harshal Jawale</li>
                         <li>Neha Ukey</li>
-                        <li>Shubham Mungse</li>
+                        <li>Shubham Mungase</li>
                         <li>Atish Butkar</li>
                     </ul>
                 </p>

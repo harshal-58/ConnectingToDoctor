@@ -52,7 +52,7 @@ function App() {
             <Route path="/patient" element={<Patient/>}></Route>
             <Route path="/adddoctor" element={<AddDoctor/>}></Route>
             <Route path="/addarea" element={<AddArea/>}></Route>
-            
+            <Route path="/addcity" element={<AddCity/>}></Route>
             <Route path="/addstate" element={<AddState/>}></Route>
             <Route path="/viewdoctor" element={<ViewDoctor/>}></Route>
             <Route path="/viewpatient" element={<AdminViewPatient/>}></Route>

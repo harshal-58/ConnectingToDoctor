@@ -141,7 +141,7 @@ CREATE TABLE `doctor` (
 
 LOCK TABLES `doctor` WRITE;
 /*!40000 ALTER TABLE `doctor` DISABLE KEYS */;
-INSERT INTO `doctor` VALUES (1,'Mayuresh','Lathkar','7350943266','Male','1997-09-14','MBBS','MD','Orthopedic',500,1,3),(2,'Vishal','Chavan','8237345698','Male','1995-12-12','MBBS','MD','Cardiologists',1000,2,6),(3,'Akash','Auti','7878984432','Male','1995-10-10','MBBS','MD','Gynecologist',600,1,7),(4,'Akash','Alure','8698867332','Male','1996-09-03','MBBS','MD','Pediatrician',400,2,8),(5,'Ankit','Sharma','9987652345','Male','1995-03-01','BDS','','Dentist',300,1,9),(6,'Rahul','Mahajan','7845903216','Male','1996-04-04','MBBS','','Physician',400,1,10),(7,'Ankita','Mishra','9296784432','Female','1995-06-14','MBBS','MS','Gynecologist',500,1,11),(8,'Niraj','Shinde','7878652432','Male','1992-03-03','MBBS','','Physician',600,1,12);
+INSERT INTO `doctor` VALUES (1,'Mayuresh','Lathkar','7350943266','Male','1997-09-14','MBBS','MD','Orthopedic',500,1,3),(3,'Akash','Auti','7878984432','Male','1995-10-10','MBBS','MD','Gynecologist',600,1,7);
 /*!40000 ALTER TABLE `doctor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -257,7 +257,7 @@ CREATE TABLE `login` (
 
 LOCK TABLES `login` WRITE;
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES (1,'atishbutkar.project@gmail.com','Atish@123','Admin','active'),(2,'vikas.dandge07@gmail.com','vikas@123','Patient','active'),(3,'lathkarmayuresh14@gmail.com','mayuresh@123','Doctor','active'),(4,'connecttoyourdoctor@gmail.com','connect@123','Admin','active'),(5,'mrunalzanzane5@gmail.com','mrunal@1234','Patient','active'),(6,'vishal.chavan123@gmail.com','vishal@123','Doctor','active'),(7,'akashauti123@gmail.com','akash@123','Doctor','active'),(8,'akashalure123@gmail.com','akash@123','Doctor','active'),(9,'ankitsharma123@gmail.com','ankit@123','Doctor','active'),(10,'rahulmahajan123@gmail.com','rahul@123','Doctor','active'),(11,'ankitamishra123@gmail.com','ankita@123','Doctor','active'),(12,'neerajshinde123@gmail.com','neeraj@123','Doctor','active');
+INSERT INTO `login` VALUES (1,'atishbutkar.project@gmail.com','Atish@123','Admin','active'),(3,'lathkarmayuresh14@gmail.com','mayuresh@123','Doctor','active'),(4,'connecttoyourdoctor@gmail.com','connect@123','Admin','active'),(5,'mrunalzanzane5@gmail.com','mrunal@1234','Patient','active'),(6,'vishal.chavan123@gmail.com','vishal@123','Doctor','active'),(7,'akashauti123@gmail.com','akash@123','Doctor','active'),(8,'akashalure123@gmail.com','akash@123','Doctor','active'),(9,'ankitsharma123@gmail.com','ankit@123','Doctor','active'),(10,'rahulmahajan123@gmail.com','rahul@123','Doctor','active'),(11,'ankitamishra123@gmail.com','ankita@123','Doctor','active'),(12,'neerajshinde123@gmail.com','neeraj@123','Doctor','active');
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 UNLOCK TABLES;
 

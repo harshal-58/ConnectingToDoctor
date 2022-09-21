@@ -72,19 +72,12 @@ function Login(){
 
 
     return (
-        <div >
-            
+        <div>
             <br/><br/>
             <div className = "container">
-            
-                <div className="carousel-item active">
-                <div className = "card col-md-6  ">
-                    <img class="img-thumbnail" src="/assets/appointment.png"/>
-                </div>
-            </div>
+    
             <div className = "row">
-                <div className = "card col-md-6 offset-md-6 offset-md-0">
-                    
+                <div className = "card col-md-6 offset-md-3 offset-md-3">
                 <h2 className='text-center'>Login</h2>
 
                 <form >
