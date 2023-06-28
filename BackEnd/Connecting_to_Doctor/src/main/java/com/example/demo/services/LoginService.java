@@ -30,6 +30,7 @@ public class LoginService {
 	public List<Login> getAllUsers() {
 		return loginrepo.findAll();
 	}
+	
 	//fine user by id
 	public Optional<Login> getUser(int id) {
 		return loginrepo.findById(id);
@@ -79,6 +80,7 @@ public class LoginService {
 			return null;
 			}
 		
+			
 		}
 		return null;
 
@@ -91,6 +93,7 @@ public class LoginService {
 			return null;
 		}
 	}
+	
 	public Login forgotPassword(String username) {
 		// TODO Auto-generated method stub
 		Login l = loginrepo.forgotPassword(username);

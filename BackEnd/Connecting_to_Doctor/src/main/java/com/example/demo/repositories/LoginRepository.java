@@ -16,3 +16,5 @@ public interface LoginRepository extends JpaRepository<Login, Integer> {
 	public Login forgotPassword(String username);
 
 }
+
+

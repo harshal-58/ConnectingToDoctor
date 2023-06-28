@@ -48,6 +48,7 @@ public class AppointmentService {
 			" (Speciality : "+aa.getDoctorId().getSpeciality()+")\nPatient Details : \nPatient Name : "+aa.getPatientId().getFirstName()+" "+aa.getPatientId().getLastName()
 			+" (Mobile Number : "+aa.getPatientId().getMobileNumber()+")\nLocation : "+aa.getDoctorId().getArea_id().getAreaName()+" "+
 			aa.getDoctorId().getArea_id().getCity_id().getCityName()+" "+aa.getDoctorId().getArea_id().getCity_id().getState_id().getStateName());
+			
 			jms.send(smm);
 			return aa;
 		}
@@ -68,6 +69,7 @@ public class AppointmentService {
 			" (Speciality : "+aa.getDoctorId().getSpeciality()+")\nPatient Details : \nPatient Name : "+aa.getPatientId().getFirstName()+" "+aa.getPatientId().getLastName()
 			+" (Mobile Number : "+aa.getPatientId().getMobileNumber()+")\nLocation : "+aa.getDoctorId().getArea_id().getAreaName()+" "+
 			aa.getDoctorId().getArea_id().getCity_id().getCityName()+" "+aa.getDoctorId().getArea_id().getCity_id().getState_id().getStateName());
+			
 			jms.send(smm);
 			return aa;
 		}
