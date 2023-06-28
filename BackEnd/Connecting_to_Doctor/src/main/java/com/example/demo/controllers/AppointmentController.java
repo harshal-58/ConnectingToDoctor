@@ -20,6 +20,7 @@ import com.example.demo.services.AppointmentService;
 import com.example.demo.services.DoctorService;
 import com.example.demo.services.PatientService;
 
+// This is Controller Class
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
